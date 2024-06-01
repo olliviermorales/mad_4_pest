@@ -26,6 +26,14 @@ const Footer = () => {
         <p className="text-white text-center text-[12px]">
           © 2024 Mad4Pest. All rights reserved.
         </p>
+        <a
+          href="mailto:morales.ollivier@gmail.com"
+          className="text-white text-center text-[10px] hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Developed by Bedoy
+        </a>
       </div>
       <div className="flex flex-col items-center sm:items-end">
         <span className="text-white text-lg font-bold">

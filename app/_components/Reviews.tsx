@@ -89,9 +89,16 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div ref={reviewsRef} className="w-full flex flex-col py-16 gap-8">
-      <h1 className="relative font-black text-[#00A2D8] text-center text-3xl md:text-4xl uppercase underline">
-        What People Think About Us
+    <div ref={reviewsRef} className="relative w-full flex flex-col py-16 gap-8">
+      <Image
+        src="/assets/images/logo-white.svg"
+        alt="Background"
+        className="absolute top-0 left-0 z-0 w-2/3 h-2/3 opacity-10 object-fit"
+        width={2000}
+        height={2000}
+      />
+      <h1 className="relative font-black text-white text-center text-3xl md:text-4xl uppercase">
+        Reviews
       </h1>
       <div
         className={`flex flex-col w-full ${
@@ -111,8 +118,8 @@ const Reviews = () => {
                       src={review.image}
                       alt={review.name}
                       className="w-24 h-24 rounded-full mb-4"
-                      width={2000}
-                      height={2000}
+                      width={1000}
+                      height={1000}
                     />
                     <p className="text-lg font-semibold mb-2">{review.name}</p>
                     <p className="text-sm mb-4">{review.statement}</p>

@@ -206,7 +206,7 @@ html {
 }
 
 .embla__button--next {
-  right: 1rem;
+  right: 0rem;
 }
 
 .embla__button.disabled {
