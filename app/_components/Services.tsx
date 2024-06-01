@@ -1,11 +1,14 @@
+import { Check } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 
 const Services = () => {
   const scopeRef = useRef(null);
   const whereRef = useRef(null);
+  const setsUsApartRef = useRef(null);
   const [isScopeVisible, setIsScopeVisible] = useState(false);
   const [isWhereVisible, setIsWhereVisible] = useState(false);
+  const [isSetsUsApartVisible, setIsSetsUsApartVisible] = useState(false);
 
   useEffect(() => {
     const scopeObserver = new IntersectionObserver(
@@ -28,6 +31,16 @@ const Services = () => {
       { threshold: 0.1 }
     );
 
+    const setsUsApartObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsSetsUsApartVisible(true);
+          setsUsApartObserver.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
     if (scopeRef.current) {
       scopeObserver.observe(scopeRef.current);
     }
@@ -36,12 +49,19 @@ const Services = () => {
       whereObserver.observe(whereRef.current);
     }
 
+    if (setsUsApartRef.current) {
+      setsUsApartObserver.observe(setsUsApartRef.current);
+    }
+
     return () => {
       if (scopeRef.current) {
         scopeObserver.unobserve(scopeRef.current);
       }
       if (whereRef.current) {
         whereObserver.unobserve(whereRef.current);
+      }
+      if (setsUsApartRef.current) {
+        setsUsApartObserver.unobserve(setsUsApartRef.current);
       }
     };
   }, []);
@@ -202,6 +222,64 @@ const Services = () => {
             </h3>
           </div>
         </div>
+      </div>
+      <div
+        ref={setsUsApartRef}
+        className={`flex flex-col items-center w-full max-w-7xl p-4 md:p-8 mt-16 ${
+          isSetsUsApartVisible ? "animate-fade-in" : ""
+        }`}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-[#E02A20] mb-8 text-center">
+          What Sets Us Apart?
+        </h2>
+        <ul className="list-none space-y-4">
+          <li className="flex items-start space-x-2">
+            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
+              <span className="text-[white] text-sm font-bold  ">
+                <Check weight="bold" />
+              </span>
+            </div>
+            <span>We can cater to all types of clients.</span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
+              <span className="text-[white] text-sm font-bold  ">
+                <Check weight="bold" />
+              </span>
+            </div>
+            <span>Specialty in Resistant Strain.</span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <div className="bg-[#00A2D8] rounded-full w-9 sm:w-5 h-5 text-center justify-center items-center flex">
+              <span className="text-[white] text-sm font-bold  ">
+                <Check weight="bold" />
+              </span>
+            </div>
+            <span>
+              Can work on delicate machines,{" "}
+              <span className="text-[#00A2D8] font-bold">
+                no need for BALOT SYSTEM
+              </span>
+              .
+            </span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
+              <span className="text-[white] text-sm font-bold  ">
+                <Check weight="bold" />
+              </span>
+            </div>
+            <span>Can work during operational hours.</span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
+              <span className="text-[white] text-sm font-bold  ">
+                <Check weight="bold" />
+              </span>
+            </div>
+            <span>99% Kill Rate Guarantee.</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
