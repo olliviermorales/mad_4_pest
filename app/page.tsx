@@ -7,6 +7,7 @@ import Home from "./_components/Home";
 import AboutUs from "./_components/AboutUs";
 import Services from "./_components/Services";
 import Reviews from "./_components/Reviews";
+import ContactUs from "./_components/ContactUs";
 
 const RootPage = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
@@ -48,9 +49,9 @@ const RootPage = () => {
           </div>
           <div
             id="contact-us"
-            className="flex items-center justify-center h-screen bg-gray-600"
+            className="flex items-center justify-center  min-h-screen bg-gray-800  px-4  xl:px-64"
           >
-            <h1 className="text-white text-4xl">Contact Us Section</h1>
+            <ContactUs />
           </div>
           <Footer />
         </>

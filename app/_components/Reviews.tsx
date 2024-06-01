@@ -2,7 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { DotButton, PrevButton, NextButton } from "./CarouselButtons"; // Custom buttons
+import {
+  DotButton,
+  PrevButton,
+  NextButton,
+  NextButtonVideo,
+  PrevButtonVideo,
+} from "./CarouselButtons";
 
 const reviews = [
   {
@@ -84,8 +90,8 @@ const Reviews = () => {
 
   return (
     <div ref={reviewsRef} className="w-full flex flex-col py-16 gap-8">
-      <h1 className="font-black text-[#00A2D8] text-center text-3xl md:text-4xl">
-        Reviews
+      <h1 className="relative font-black text-[#00A2D8] text-center text-3xl md:text-4xl uppercase underline">
+        What People Think About Us
       </h1>
       <div
         className={`flex flex-col w-full ${
@@ -171,18 +177,18 @@ const Reviews = () => {
                       src={video.src}
                       poster={video.poster}
                       controls
-                      className="w-full bg-black  max-h-[640px] rounded-lg mb-4"
+                      className="w-full bg-black  min-h-[640px] md:max-h-[640px] h-auto rounded-lg mb-4"
                     />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <PrevButton
+          <PrevButtonVideo
             onClick={() => emblaVideoApi?.scrollPrev()}
             enabled={emblaVideoApi && emblaVideoApi.canScrollPrev()}
           />
-          <NextButton
+          <NextButtonVideo
             onClick={() => emblaVideoApi?.scrollNext()}
             enabled={emblaVideoApi && emblaVideoApi.canScrollNext()}
           />
