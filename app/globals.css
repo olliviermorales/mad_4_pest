@@ -163,3 +163,60 @@ html {
 .animate-fade-in-services {
   animation: fadeIn 1s ease-in-out;
 }
+
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  min-width: 100%;
+}
+
+.embla__button {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  background-color: #e02a20;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.embla__ .embla__button--prev {
+  left: 1rem;
+}
+
+.embla__button--next {
+  right: 1rem;
+}
+
+.embla__button.disabled {
+  display: none;
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.embla__dot {
+  background-color: #ccc;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.embla__dot.is-selected {
+  background-color: #00a2d8;
+}
