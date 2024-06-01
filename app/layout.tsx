@@ -6,8 +6,8 @@ const azeretMono = Azeret_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mad4Pets",
-  description: "Mad4Pets",
+  title: "Mad4Pest",
+  description: "Mad4Pest",
 };
 
 export default function RootLayout({

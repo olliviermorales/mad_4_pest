@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Cockroach from "./Cockroach";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 const jersey = localFont({
   src: [
@@ -22,7 +22,6 @@ const generateRandomPosition = () => {
   }
   return { top: 0, left: 0 };
 };
-
 const generateRandomDirection = () => {
   const angle = Math.random() * 2 * Math.PI;
   return {

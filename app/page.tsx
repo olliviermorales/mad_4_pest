@@ -4,6 +4,7 @@ import SplashScreen from "./_components/SplashScreen";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import Home from "./_components/Home";
+import AboutUs from "./_components/AboutUs";
 
 const RootPage = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
@@ -27,9 +28,9 @@ const RootPage = () => {
           </div>
           <div
             id="about-us"
-            className="flex items-center justify-center h-screen bg-gray-800"
+            className="flex items-center justify-center  min-h-screen  bg-[#525252] px-4  xl:px-64"
           >
-            <h1 className="text-white text-4xl">About Us Section</h1>
+            <AboutUs />
           </div>
           <div
             id="services"
