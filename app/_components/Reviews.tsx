@@ -15,16 +15,16 @@ const reviews = [
     name: "Vivian Margin",
     statement:
       "Ang galing ng pest control na to,...andaming patay na ipis...d gaya sa ibang pest control na nasubukan nmin, wa epek...nung kau na ang nag pest control sa min nawala na mga peste....tsaka da best ung panghuli nyo sa daga...mad4pest ur da best",
+    image: "/assets/icons/logo.png",
+  },
+  {
+    name: "Happy Samgyup Staff",
+    statement:
+      "Sulit kay MAD4PEST! Siguradong nawala ang mga peste at accommodating ang mga staff.",
     image: "/assets/images/video1-image.png",
   },
   {
-    name: "Jane Smith",
-    statement:
-      "Great customer service and effective pest control solutions. Our go-to company for pest issues.",
-    image: "/assets/images/video2-image.png",
-  },
-  {
-    name: "ACME Corp",
+    name: "Clownz Republic (Manager Paul Quilantang)",
     statement:
       "Professional and reliable. Mad4Pest has kept our office pest-free for years.",
     image: "/assets/images/video2-image.png",
@@ -41,6 +41,10 @@ const videoReviews = [
     src: "/assets/videos/video2.mp4",
     poster: "/assets/images/video2-image.png",
   },
+  {
+    src: "/assets/videos/video3.mp4",
+    poster: "/assets/images/video3-image.png",
+  },
   // Add more video reviews as needed
 ];
 
@@ -52,19 +56,33 @@ const Reviews = () => {
     Autoplay(),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [selectedIndexVideo, setSelectedIndexVideo] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [scrollSnapsVideo, setScrollSnapsVideo] = useState<number[]>([]);
 
   const onSelect = () => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   };
 
+  const onSelectVideo = () => {
+    if (!emblaVideoApi) return;
+    setSelectedIndexVideo(emblaVideoApi.selectedScrollSnap());
+  };
+
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList() as any);
+    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
   }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaVideoApi) return;
+    onSelectVideo();
+    setScrollSnapsVideo(emblaVideoApi.scrollSnapList());
+    emblaVideoApi.on("select", onSelectVideo);
+  }, [emblaVideoApi]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -184,7 +202,7 @@ const Reviews = () => {
                       src={video.src}
                       poster={video.poster}
                       controls
-                      className="w-full bg-black  min-h-[640px] md:max-h-[640px] h-auto rounded-lg mb-4"
+                      className="w-full bg-black min-h-[640px] md:max-h-[640px] h-auto rounded-lg mb-4"
                     />
                   </div>
                 </div>
@@ -200,10 +218,10 @@ const Reviews = () => {
             enabled={emblaVideoApi && emblaVideoApi.canScrollNext()}
           />
           <div className="embla__dots">
-            {[...Array(2)].map((_, index) => (
+            {scrollSnapsVideo.map((_, index) => (
               <DotButton
                 key={index}
-                selected={index === selectedIndex}
+                selected={index === selectedIndexVideo}
                 onClick={() => emblaVideoApi?.scrollTo(index)}
               />
             ))}

@@ -181,7 +181,7 @@ html {
   position: absolute;
   top: 20%;
   transform: translateY(-50%);
-  background-color: #e02a20;
+  background-color: #e02a2085;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -193,7 +193,7 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #e02a20;
+  background-color: #e02a2085;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
