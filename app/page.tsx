@@ -8,7 +8,7 @@ import AboutUs from "./_components/AboutUs";
 import Services from "./_components/Services";
 
 const RootPage = () => {
-  const [showSplashScreen, setShowSplashScreen] = useState(false);
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   const handleContinue = () => {
     setShowSplashScreen(false);
