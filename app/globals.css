@@ -232,3 +232,16 @@ html {
 .embla__dot.is-selected {
   background-color: #00a2d8;
 }
+
+@layer components {
+  .loader {
+    border-top-color: #3498db;
+    animation: spin 1s infinite linear;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

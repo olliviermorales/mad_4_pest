@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SplashScreen from "./_components/SplashScreen";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
@@ -8,20 +8,29 @@ import AboutUs from "./_components/AboutUs";
 import Services from "./_components/Services";
 import Reviews from "./_components/Reviews";
 import ContactUs from "./_components/ContactUs";
+import LoadingScreen from "./_components/LoadingScreen";
+import ScrollToTopButton from "./_components/ScrollToTopButton";
 
 const RootPage = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const handleContinue = () => {
     setShowSplashScreen(false);
   };
 
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setLoading(false);
+    }
+  }, []);
   return (
     <div className="App">
+      {loading && <LoadingScreen setLoading={setLoading} />}
       {showSplashScreen ? (
         <SplashScreen onContinue={handleContinue} />
       ) : (
-        <>
+        <div className="overflow-hidden">
           <Navbar />
           <div
             id="home"
@@ -54,7 +63,8 @@ const RootPage = () => {
             <ContactUs />
           </div>
           <Footer />
-        </>
+          <ScrollToTopButton />
+        </div>
       )}
     </div>
   );
