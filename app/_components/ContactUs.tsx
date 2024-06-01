@@ -63,32 +63,32 @@ const ContactUs = () => {
             Contact Us
           </h2>
           <div className="flex items-center gap-2">
-            <FacebookLogo size={32} weight="fill" />
-            <p>www.facebook.com/mad4pest</p>
+            <FacebookLogo size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">www.facebook.com/mad4pest</p>
           </div>
           <div className="flex items-center gap-2">
-            <TiktokLogo size={32} weight="fill" />
-            <p>https://www.tiktok.com/@Mad4pest</p>
+            <TiktokLogo size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">www.tiktok.com/@Mad4pest</p>
           </div>
           <div className="flex items-center gap-2">
-            <Envelope size={32} weight="fill" />
-            <p>mad4pestphilippines@gmail.com</p>
+            <Envelope size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">mad4pestphilippines@gmail.com</p>
           </div>
           <div className="flex items-center gap-2">
-            <SimCard size={32} weight="fill" />
-            <p>(SMART) +63 9608664869</p>
+            <SimCard size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">(SMART) +63 9608664869</p>
           </div>
           <div className="flex items-center gap-2">
-            <SimCard size={32} weight="fill" />
-            <p>(GLOBE) +63 9174358884</p>
+            <SimCard size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">(GLOBE) +63 9174358884</p>
           </div>
           <div className="flex items-center gap-2">
-            <Phone size={32} weight="fill" />
-            <p>(LANDLINE) 0282941952</p>
+            <Phone size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">(LANDLINE) 0282941952</p>
           </div>
           <div className="flex items-center gap-2">
-            <HouseLine size={32} weight="fill" />
-            <p>Sampaloc, Manila, Philippines</p>
+            <HouseLine size={32} weight="fill" className="shrink-0" />
+            <p className="truncate">Sampaloc, Manila, Philippines</p>
           </div>
         </motion.div>
         <motion.div

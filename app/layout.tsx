@@ -40,6 +40,7 @@ export const metadata: CustomMetadata = {
   title: "Mad4Pest",
   description:
     "PEST CONTROL SOLUTIONS Pests and viruses don't wait. Neither should you.",
+  metadataBase: new URL("https://www.mad4pest.com"), // Set the base URL
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -49,7 +50,7 @@ export const metadata: CustomMetadata = {
       "PEST CONTROL SOLUTIONS Pests and viruses don't wait. Neither should you.",
     images: [
       {
-        url: "/assets/icons/logo.png", // Path to your local image
+        url: "/assets/icons/logo.png",
         width: 1200,
         height: 630,
         alt: "Mad4Pest Logo",
@@ -63,9 +64,13 @@ export const metadata: CustomMetadata = {
     title: "Mad4Pest",
     description:
       "PEST CONTROL SOLUTIONS Pests and viruses don't wait. Neither should you.",
-    image: "/assets/icons/logo.png", // Path to your local image
+    image: "/assets/icons/logo.png",
   },
-  viewport: "width=device-width, initial-scale=1.0",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -89,7 +94,7 @@ export default function RootLayout({
               property="og:description"
               content={metadata.openGraph.description}
             />
-            {metadata.openGraph.images && metadata.openGraph.images[0] && (
+            {metadata.openGraph.images[0] && (
               <>
                 <meta
                   property="og:image"
