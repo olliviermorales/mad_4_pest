@@ -52,10 +52,10 @@ const AboutUs = () => {
             isVisible ? "animate-slide-left" : ""
           }`}
         >
-          <h1 className="font-black text-[#00A2D8] text-3xl md:text-4xl">
+          <h1 className="font-black text-[#00A2D8] text-center lg:text-start  text-3xl md:text-4xl">
             About Us
           </h1>
-          <p className="text-sm md:text-base">
+          <p className="text-sm xs: md:text-base text-center lg:text-start">
             <span className="font-bold">Mad4Pest</span> is a professional pest
             control company in Metro Manila, Philippines{" "}
             <span className="font-bold">established in 2013</span>. We service
@@ -81,7 +81,7 @@ const AboutUs = () => {
           isVisible ? "animate-fade-in" : ""
         }`}
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-[#E02A20] mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#00A2D8] mb-8 text-center">
           Our Core Values
         </h2>
         <div className="flex flex-col md:flex-row gap-8">

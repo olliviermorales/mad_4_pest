@@ -74,7 +74,7 @@ const Services = () => {
           isScopeVisible ? "animate-fade-in-services" : ""
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-[#E02A20] mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#00A2D8] mb-8 text-center">
           Scope of Service
         </h2>
         <p className="text-center mb-8">
@@ -96,7 +96,7 @@ const Services = () => {
             <h3 className="text-lg md:text-xl font-bold">
               General Pest Control
             </h3>
-            <ul className="list-disc text-xs md:text-sm mt-2">
+            <ul className="list-disc text-xs w-full items-start text-start flex flex-col md:text-sm mt-2 gap-1">
               <li>Cockroaches</li>
               <li>Ants/crawling insects</li>
               <li>Rodents/mice</li>
@@ -113,8 +113,10 @@ const Services = () => {
                 height={32}
               />
             </div>
-            <h3 className="text-lg md:text-xl font-bold">Termite Control</h3>
-            <ul className="list-disc text-xs md:text-sm mt-2">
+            <h3 className="text-lg md:text-xl font-bold flex">
+              Termite Control
+            </h3>
+            <ul className="list-disc text-xs w-full items-start text-start flex flex-col md:text-sm mt-2 gap-1">
               <li>Non-repellant & Repellant Soil Poisoning</li>
               <li>Reticulation Piping System</li>
               <li>Termite interception & Baiting System</li>
@@ -133,7 +135,7 @@ const Services = () => {
               />
             </div>
             <h3 className="text-lg md:text-xl font-bold">Treatment</h3>
-            <ul className="list-disc text-xs md:text-sm mt-2">
+            <ul className="list-disc w-full items-start text-start flex flex-col   text-xs md:text-sm mt-2 gap-1">
               <li>Baiting System</li>
               <li>Bed Bugs</li>
               <li>Colony Elimination</li>
@@ -153,7 +155,7 @@ const Services = () => {
               />
             </div>
             <h3 className="text-lg md:text-xl font-bold">Other Services</h3>
-            <ul className="list-disc text-xs md:text-sm mt-2">
+            <ul className="list-disc w-full items-start text-start flex flex-col text-xs md:text-sm mt-2 gap-1">
               <li>Begbugs Treatment</li>
               <li>Car Pest Elimination</li>
               <li>Cleaning + Pest Control Package</li>
@@ -170,7 +172,7 @@ const Services = () => {
           isWhereVisible ? "animate-fade-in" : ""
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-[#E02A20] mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#00A2D8] mb-8 text-center">
           Where we Service
         </h2>
         <p className="text-center mb-8">
@@ -226,33 +228,33 @@ const Services = () => {
       <div
         ref={setsUsApartRef}
         className={`flex flex-col items-center w-full max-w-7xl p-4 md:p-8 mt-16 ${
-          isSetsUsApartVisible ? "animate-fade-in" : ""
+          isSetsUsApartVisible ? "animate-fade-in-services" : ""
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-[#E02A20] mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#00A2D8] mb-8 text-center">
           What Sets Us Apart?
         </h2>
         <ul className="list-none space-y-4">
           <li className="flex items-start space-x-2">
-            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
-              <span className="text-[white] text-sm font-bold  ">
-                <Check weight="bold" />
+            <div className="bg-[#00A2D8] rounded-full w-6 h-6 text-center justify-center items-center flex">
+              <span className="text-white text-sm font-bold">
+                <Check weight="bold" size={20} />
               </span>
             </div>
             <span>We can cater to all types of clients.</span>
           </li>
           <li className="flex items-start space-x-2">
-            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
-              <span className="text-[white] text-sm font-bold  ">
-                <Check weight="bold" />
+            <div className="bg-[#00A2D8] rounded-full w-6 h-6 text-center justify-center items-center flex">
+              <span className="text-white text-sm font-bold">
+                <Check weight="bold" size={20} />
               </span>
             </div>
             <span>Specialty in Resistant Strain.</span>
           </li>
           <li className="flex items-start space-x-2">
-            <div className="bg-[#00A2D8] rounded-full w-9 sm:w-5 h-5 text-center justify-center items-center flex">
-              <span className="text-[white] text-sm font-bold  ">
-                <Check weight="bold" />
+            <div className="bg-[#00A2D8] rounded-full w-6 h-6 text-center justify-center items-center flex">
+              <span className="text-white text-sm font-bold">
+                <Check weight="bold" size={20} />
               </span>
             </div>
             <span>
@@ -264,17 +266,17 @@ const Services = () => {
             </span>
           </li>
           <li className="flex items-start space-x-2">
-            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
-              <span className="text-[white] text-sm font-bold  ">
-                <Check weight="bold" />
+            <div className="bg-[#00A2D8] rounded-full w-6 h-6 text-center justify-center items-center flex">
+              <span className="text-white text-sm font-bold">
+                <Check weight="bold" size={20} />
               </span>
             </div>
             <span>Can work during operational hours.</span>
           </li>
           <li className="flex items-start space-x-2">
-            <div className="bg-[#00A2D8] rounded-full w-5 h-5 text-center justify-center items-center flex">
-              <span className="text-[white] text-sm font-bold  ">
-                <Check weight="bold" />
+            <div className="bg-[#00A2D8] rounded-full w-6 h-6 text-center justify-center items-center flex">
+              <span className="text-white text-sm font-bold">
+                <Check weight="bold" size={20} />
               </span>
             </div>
             <span>99% Kill Rate Guarantee.</span>
