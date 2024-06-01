@@ -14,10 +14,13 @@ const jersey = localFont({
 });
 
 const generateRandomPosition = () => {
-  return {
-    top: Math.random() * (window.innerHeight - 50),
-    left: Math.random() * (window.innerWidth - 50),
-  };
+  if (typeof window !== "undefined") {
+    return {
+      top: Math.random() * (window.innerHeight - 50),
+      left: Math.random() * (window.innerWidth - 50),
+    };
+  }
+  return { top: 0, left: 0 };
 };
 
 const generateRandomDirection = () => {
