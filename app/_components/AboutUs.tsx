@@ -43,8 +43,8 @@ const AboutUs = () => {
             src="/assets/images/about-us.png"
             alt="Mad4Pest"
             className="h-full w-full object-cover rounded-lg"
-            width={2000}
-            height={2000}
+            width={1000}
+            height={1000}
           />
         </div>
         <div
@@ -66,7 +66,7 @@ const AboutUs = () => {
             customer care and great value of a small company as well as the
             reliability and responsiveness of a large company.
           </p>
-          <p className="text-sm md:text-base">
+          <p className="text-sm xs: md:text-base text-center lg:text-start">
             Founded by Progressive-Minded Young Entrepreneurs,{" "}
             <span className="font-bold">Mad4Pest</span> is led by an expert
             management team and our Technical Support Specialists are

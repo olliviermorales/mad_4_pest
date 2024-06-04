@@ -112,8 +112,8 @@ const Reviews = () => {
         src="/assets/images/logo-white.svg"
         alt="Background"
         className="absolute top-0 left-0 z-0 w-2/3 h-2/3 opacity-10 object-fit"
-        width={2000}
-        height={2000}
+        width={1000}
+        height={1000}
       />
       <h1 className="relative font-black text-white text-center text-3xl md:text-4xl uppercase">
         Reviews

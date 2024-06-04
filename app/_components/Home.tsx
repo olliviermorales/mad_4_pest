@@ -16,8 +16,8 @@ const Home = () => {
         src="/assets/images/home-image.png"
         alt="Mad4Pest"
         className="absolute inset-0 h-full w-full object-cover blur-sm"
-        width={2000}
-        height={2000}
+        width={1000}
+        height={1000}
       />
       <div
         className={`relative z-10 flex flex-col justify-center items-start h-full w-full md:w-1/2 p-4 md:pl-6 lg:pl-32 bg-gradient-to-r from-black to-transparent transition-all duration-1000 ${

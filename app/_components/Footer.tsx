@@ -14,8 +14,8 @@ const Footer = () => {
         <Link href="/" className="flex items-center gap-1 mb-4 sm:mb-0">
           <Image
             src="/assets/icons/logo-white.png"
-            width={2000}
-            height={2000}
+            width={1000}
+            height={1000}
             alt="Mad4Pest"
             className="w-16 h-16 object-contain"
           />

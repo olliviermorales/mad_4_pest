@@ -17,8 +17,8 @@ const Navbar = () => {
       <Link href="/" className="flex items-center gap-1">
         <Image
           src="/assets/icons/logo.png"
-          width={2000}
-          height={2000}
+          width={1000}
+          height={1000}
           alt="Mad4Pest"
           className="w-16 h-16  object-contain"
         />

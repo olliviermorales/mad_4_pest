@@ -24,8 +24,8 @@ const LoadingScreen = ({ setLoading }: any) => {
         src="/assets/images/logo-white.svg"
         alt="Background"
         className="absolute bottom-0 right-0 z-0 w-2/3 h-2/3 opacity-30 object-fit"
-        width={2000}
-        height={2000}
+        width={1000}
+        height={1000}
       />
       <span className="sr-only">Loading...</span>
       <div className="h-8 w-8 bg-[#00A2D8] drop-shadow-md rounded-full animate-bounce [animation-delay:-0.3s]"></div>
